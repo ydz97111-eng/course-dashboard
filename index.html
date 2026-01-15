@@ -4,13 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>دورة الفيديو</title>
+
 <style>
-  body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
-  .video-box { margin-bottom: 30px; }
-  img { cursor: pointer; max-width: 100%; height: auto; margin-bottom: 10px; }
-  #wistia_video_container { margin-top: 20px; display: none; }
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+  .video-box {
+    margin-bottom: 30px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+  }
+  #wistia_video_container {
+    margin-top: 20px;
+    display: none;
+  }
 </style>
 </head>
+
 <body>
 
 <h1>دورة الفيديو</h1>
@@ -22,21 +39,17 @@
 
 <!-- قواعد البرنامج -->
 <div class="video-box">
-  <a href="https://ydz97111.wistia.com/medias/VIDEO_ID_1" target="_blank">
-    <img src="images/quwaa.jpg" alt="قواعد البرنامج">
-  </a>
+  <img src="images/quwaa.jpg" alt="قواعد البرنامج">
   <h2>قواعد البرنامج</h2>
 </div>
 
 <!-- توضيح جد مهم -->
 <div class="video-box">
-  <a href="https://ydz97111.wistia.com/medias/VIDEO_ID_2" target="_blank">
-    <img src="images/tawdih.jpg" alt="توضيح جد مهم عن البرنامج">
-  </a>
+  <img src="images/tawdih.jpg" alt="توضيح جد مهم عن البرنامج">
   <h2>توضيح جد مهم عن البرنامج</h2>
 </div>
 
-<!-- مقدمة المرحلة الأولى -->
+<!-- مقدمة المرحلة الأولى (فيديو) -->
 <div class="video-box">
   <img id="intro_image" src="images/intro.jpg" alt="مقدمة المرحلة الأولى">
   <h2>مقدمة المرحلة الأولى</h2>
@@ -47,7 +60,7 @@
 
 <!-- قانون الطبيعة -->
 <div class="video-box">
-  <img src="images/الطبيعة - نسخة.jpg" alt="قانون الطبيعة">
+  <img src="images/nature - Copie.jpg" alt="قانون الطبيعة">
   <h2>قانون الطبيعة</h2>
 </div>
 
@@ -60,7 +73,7 @@
 <!-- قابل الشيطان -->
 <div class="video-box">
   <img src="images/devil.jpg" alt="قابل الشيطان">
-  <h2>قابل الشيطان وجه لوجه</h2>
+  <h2>قابل الشيطان وجهًا لوجه</h2>
 </div>
 
 <!-- الازدواجية والصراع -->
@@ -74,17 +87,17 @@
   <img src="images/bottom.jpg" alt="نهاية البرنامج">
 </div>
 
-<!-- سكريبت Wistia -->
+<!-- Wistia -->
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <script>
-  // إنشاء الفيديو مسبقًا ولكن مخفي
-  var container = document.getElementById("wistia_video_container");
-  container.innerHTML = '<div class="wistia_embed wistia_async_jti0fzlfoo videoFoam=true" style="height:500px;width:100%"></div>';
+  const container = document.getElementById("wistia_video_container");
 
-  // عند الضغط على صورة مقدمة المرحلة الأولى
-  document.getElementById("intro_image").addEventListener("click", function() {
-      container.style.display = "block";
-      container.scrollIntoView({behavior: "smooth"});
+  container.innerHTML =
+    '<div class="wistia_embed wistia_async_jti0fzlfoo videoFoam=true" style="height:500px;width:100%"></div>';
+
+  document.getElementById("intro_image").addEventListener("click", function () {
+    container.style.display = "block";
+    container.scrollIntoView({ behavior: "smooth" });
   });
 </script>
 
