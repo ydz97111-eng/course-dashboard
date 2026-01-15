@@ -20,7 +20,7 @@
   <img src="images/top.jpg" alt="بداية البرنامج">
 </div>
 
-<!-- فيديو: قواعد البرنامج -->
+<!-- قواعد البرنامج -->
 <div class="video-box">
   <a href="https://ydz97111.wistia.com/medias/VIDEO_ID_1" target="_blank">
     <img src="images/quwaa.jpg" alt="قواعد البرنامج">
@@ -28,7 +28,7 @@
   <h2>قواعد البرنامج</h2>
 </div>
 
-<!-- فيديو: توضيح جد مهم عن البرنامج -->
+<!-- توضيح جد مهم -->
 <div class="video-box">
   <a href="https://ydz97111.wistia.com/medias/VIDEO_ID_2" target="_blank">
     <img src="images/tawdih.jpg" alt="توضيح جد مهم عن البرنامج">
@@ -36,7 +36,7 @@
   <h2>توضيح جد مهم عن البرنامج</h2>
 </div>
 
-<!-- فيديو: مقدمة المرحلة الأولى -->
+<!-- مقدمة المرحلة الأولى (فيديو Wistia) -->
 <div class="video-box">
   <img id="intro_image" src="images/intro.jpg" alt="مقدمة المرحلة الأولى">
   <h2>مقدمة المرحلة الأولى</h2>
@@ -45,27 +45,35 @@
 <!-- مكان ظهور الفيديو -->
 <div id="wistia_video_container"></div>
 
-<!-- فيديو: قانون الطبيعة -->
+<!-- قانون الطبيعة -->
 <div class="video-box">
-  <img src="images/nature.jpg" alt="قانون الطبيعة">
+  <a href="https://ydz97111.wistia.com/medias/nature_video_id" target="_blank">
+    <img src="images/nature.jpg" alt="قانون الطبيعة">
+  </a>
   <h2>قانون الطبيعة</h2>
 </div>
 
-<!-- فيديو: القوة المظلمة -->
+<!-- القوة المظلمة -->
 <div class="video-box">
-  <img src="images/power.jpg" alt="القوة المظلمة">
+  <a href="https://ydz97111.wistia.com/medias/power_video_id" target="_blank">
+    <img src="images/power.jpg" alt="القوة المظلمة">
+  </a>
   <h2>القوة المظلمة التي تمسك حياتك</h2>
 </div>
 
-<!-- فيديو: قابل الشيطان -->
+<!-- قابل الشيطان -->
 <div class="video-box">
-  <img src="images/devil.jpg" alt="قابل الشيطان">
+  <a href="https://ydz97111.wistia.com/medias/devil_video_id" target="_blank">
+    <img src="images/devil.jpg" alt="قابل الشيطان">
+  </a>
   <h2>قابل الشيطان وجه لوجه</h2>
 </div>
 
-<!-- فيديو: الازدواجية والصراع -->
+<!-- الازدواجية والصراع -->
 <div class="video-box">
-  <img src="images/dual.jpg" alt="الازدواجية والصراع">
+  <a href="https://ydz97111.wistia.com/medias/dual_video_id" target="_blank">
+    <img src="images/dual.jpg" alt="الازدواجية والصراع">
+  </a>
   <h2>الازدواجية والصراع بين الرجل</h2>
 </div>
 
@@ -74,14 +82,14 @@
   <img src="images/bottom.jpg" alt="نهاية البرنامج">
 </div>
 
-<!-- سكريبت Wistia للفيديو الخاص بمقدمة المرحلة الأولى -->
+<!-- سكريبت Wistia -->
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <script>
   // إنشاء الفيديو مسبقًا ولكن مخفي
   var container = document.getElementById("wistia_video_container");
   container.innerHTML = '<div class="wistia_embed wistia_async_jti0fzlfoo videoFoam=true" style="height:500px;width:100%"></div>';
 
-  // عند الضغط على الصورة نظهر الفيديو
+  // عند الضغط على صورة مقدمة المرحلة الأولى
   document.getElementById("intro_image").addEventListener("click", function() {
       container.style.display = "block";
       container.scrollIntoView({behavior: "smooth"});
