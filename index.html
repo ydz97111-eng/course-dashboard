@@ -8,7 +8,7 @@
   body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
   .video-box { margin-bottom: 30px; }
   img { cursor: pointer; max-width: 100%; height: auto; margin-bottom: 10px; }
-  #wistia_video_container { margin-top: 20px; }
+  #wistia_video_container { margin-top: 20px; display: none; }
 </style>
 </head>
 <body>
@@ -36,7 +36,7 @@
   <h2>توضيح جد مهم عن البرنامج</h2>
 </div>
 
-<!-- فيديو: مقدمة المرحلة الأولى (سيظهر عند الضغط على الصورة داخل الموقع) -->
+<!-- فيديو: مقدمة المرحلة الأولى (يظهر عند الضغط على الصورة داخل الموقع) -->
 <div class="video-box">
   <img id="intro_image" src="images/intro.jpg" alt="مقدمة المرحلة الأولى">
   <h2>مقدمة المرحلة الأولى</h2>
@@ -85,10 +85,15 @@
 <!-- سكريبت Wistia للفيديو الخاص بمقدمة المرحلة الأولى -->
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <script>
-document.getElementById("intro_image").addEventListener("click", function() {
-    var container = document.getElementById("wistia_video_container");
-    container.innerHTML = '<div class="wistia_embed wistia_async_jti0fzlfoo videoFoam=true" style="height:500px;width:100%"></div>';
-});
+  // إنشاء الفيديو مسبقًا ولكن مخفي
+  var container = document.getElementById("wistia_video_container");
+  container.innerHTML = '<div class="wistia_embed wistia_async_jti0fzlfoo videoFoam=true" style="height:500px;width:100%"></div>';
+
+  // عند الضغط على الصورة نظهر الفيديو
+  document.getElementById("intro_image").addEventListener("click", function() {
+      container.style.display = "block";
+      container.scrollIntoView({behavior: "smooth"});
+  });
 </script>
 
 </body>
