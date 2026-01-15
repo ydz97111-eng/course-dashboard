@@ -1,108 +1,97 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>برنامج الدورة</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f9f9f9;
-    }
-    img {
-      width: 90%;
-      max-width: 800px;
-      height: auto;
-      display: block;
-      margin: 20px auto;
-    }
-    .video-box {
-      margin: 20px auto;
-      max-width: 800px;
-    }
-    .video-box img {
-      width: 100%;
-      height: auto;
-      cursor: pointer;
-    }
-    .video-box h2 {
-      margin-top: 5px;
-      font-size: 1.2em;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>موقع دورة الفيديو</title>
+<style>
+  body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+  .video-box { margin-bottom: 30px; }
+  img { cursor: pointer; max-width: 100%; height: auto; margin-bottom: 10px; }
+  #wistia_video_container { margin-top: 20px; }
+</style>
 </head>
 <body>
 
-  <!-- صورة البداية -->
-  <img src="images/top.jpg" alt="صورة البداية">
+<h1>دورة الفيديو</h1>
 
-  <!-- فيديو: قواعد البرنامج -->
-  <div class="video-box">
-    <a href="LINK_VIDEO_1">
-      <img src="images/quwaa.jpg" alt="قواعد البرنامج">
-    </a>
-    <h2>قواعد البرنامج</h2>
-  </div>
+<!-- صورة البداية -->
+<div class="video-box">
+  <img src="images/top.jpg" alt="بداية البرنامج">
+</div>
 
-  <!-- فيديو: توضيح جد مهم عن البرنامج -->
-  <div class="video-box">
-    <a href="LINK_VIDEO_2">
-      <img src="images/tawdih.jpg" alt="توضيح جد مهم عن البرنامج">
-    </a>
-    <h2>توضيح جد مهم عن البرنامج</h2>
-  </div>
+<!-- فيديو: قواعد البرنامج -->
+<div class="video-box">
+  <a href="https://ydz97111.wistia.com/medias/VIDEO_ID_1" target="_blank">
+    <img src="images/quwaa.jpg" alt="قواعد البرنامج">
+  </a>
+  <h2>قواعد البرنامج</h2>
+</div>
 
-  <!-- فيديو: العقلية والانضباط وتطوير الذات -->
-  <div class="video-box">
-    <a href="LINK_VIDEO_3">
-      <img src="images/aqliya.jpg" alt="العقلية والانضباط">
-    </a>
-    <h2>العقلية والانضباط وتطوير الذات</h2>
-  </div>
+<!-- فيديو: توضيح جد مهم عن البرنامج -->
+<div class="video-box">
+  <a href="https://ydz97111.wistia.com/medias/VIDEO_ID_2" target="_blank">
+    <img src="images/tawdih.jpg" alt="توضيح جد مهم عن البرنامج">
+  </a>
+  <h2>توضيح جد مهم عن البرنامج</h2>
+</div>
 
-  <!-- فيديو: قانون الطبيعة -->
-  <div class="video-box">
-    <a href="LINK_VIDEO_4">
-      <img src="images/nature - Copie.jpg" alt="قانون الطبيعة">
-    </a>
-    <h2>قانون الطبيعة</h2>
-  </div>
+<!-- فيديو: مقدمة المرحلة الأولى (مربوط بالفيديو Wistia) -->
+<div class="video-box">
+  <a href="#" onclick="wistiaEmbed(); return false;">
+    <img src="images/intro.jpg" alt="مقدمة المرحلة الأولى">
+  </a>
+  <h2>مقدمة المرحلة الأولى</h2>
+</div>
 
-  <!-- فيديو: مقدمة المرحلة الأولى -->
-  <div class="video-box">
-    <a href="LINK_VIDEO_5">
-      <img src="images/intro.jpg" alt="مقدمة المرحلة الأولى">
-    </a>
-    <h2>مقدمة المرحلة الأولى</h2>
-  </div>
+<!-- مكان ظهور الفيديو -->
+<div id="wistia_video_container"></div>
 
-  <!-- فيديو: ملف الظل - القوة المظلمة -->
-  <div class="video-box">
-    <a href="LINK_VIDEO_6">
-      <img src="images/power.jpg" alt="القوة المظلمة">
-    </a>
-    <h2>القوة المظلمة التي تمسك حياتك</h2>
-  </div>
+<!-- فيديو: قانون الطبيعة -->
+<div class="video-box">
+  <a href="https://ydz97111.wistia.com/medias/nature_video_id" target="_blank">
+    <img src="images/nature.jpg" alt="قانون الطبيعة">
+  </a>
+  <h2>قانون الطبيعة</h2>
+</div>
 
-  <!-- فيديو: قابل الشيطان وجه لوجه -->
-  <div class="video-box">
-    <a href="LINK_VIDEO_7">
-      <img src="images/devil.jpg" alt="قابل الشيطان">
-    </a>
-    <h2>قابل الشيطان وجه لوجه</h2>
-  </div>
+<!-- فيديو: القوة المظلمة -->
+<div class="video-box">
+  <a href="https://ydz97111.wistia.com/medias/power_video_id" target="_blank">
+    <img src="images/power.jpg" alt="القوة المظلمة">
+  </a>
+  <h2>القوة المظلمة التي تمسك حياتك</h2>
+</div>
 
-  <!-- فيديو: الازدواجية والصراع بين الرجل -->
-  <div class="video-box">
-    <a href="LINK_VIDEO_8">
-      <img src="images/duality.jpg" alt="الازدواجية والصراع">
-    </a>
-    <h2>الازدواجية والصراع بين الرجل</h2>
-  </div>
+<!-- فيديو: قابل الشيطان -->
+<div class="video-box">
+  <a href="https://ydz97111.wistia.com/medias/devil_video_id" target="_blank">
+    <img src="images/devil.jpg" alt="قابل الشيطان">
+  </a>
+  <h2>قابل الشيطان وجه لوجه</h2>
+</div>
 
-  <!-- صورة النهاية -->
-  <img src="images/bottom.jpg" alt="صورة النهاية">
+<!-- فيديو: الازدواجية والصراع -->
+<div class="video-box">
+  <a href="https://ydz97111.wistia.com/medias/dual_video_id" target="_blank">
+    <img src="images/dual.jpg" alt="الازدواجية والصراع">
+  </a>
+  <h2>الازدواجية والصراع بين الرجل</h2>
+</div>
+
+<!-- صورة النهاية -->
+<div class="video-box">
+  <img src="images/bottom.jpg" alt="نهاية البرنامج">
+</div>
+
+<!-- سكريبت Wistia للفيديو الخاص بمقدمة المرحلة الأولى -->
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+<script>
+function wistiaEmbed() {
+    var container = document.getElementById("wistia_video_container");
+    container.innerHTML = '<div class="wistia_embed wistia_async_jti0fzlfoo videoFoam=true" style="height:500px;width:100%">&nbsp;</div>';
+}
+</script>
 
 </body>
 </html>
