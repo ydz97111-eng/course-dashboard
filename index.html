@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>موقع دورة الفيديو</title>
+<title>دورة الفيديو</title>
 <style>
   body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
   .video-box { margin-bottom: 30px; }
@@ -36,11 +36,9 @@
   <h2>توضيح جد مهم عن البرنامج</h2>
 </div>
 
-<!-- فيديو: مقدمة المرحلة الأولى (مربوط بالفيديو Wistia) -->
+<!-- فيديو: مقدمة المرحلة الأولى (سيظهر عند الضغط على الصورة داخل الموقع) -->
 <div class="video-box">
-  <a href="#" onclick="wistiaEmbed(); return false;">
-    <img src="images/intro.jpg" alt="مقدمة المرحلة الأولى">
-  </a>
+  <img id="intro_image" src="images/intro.jpg" alt="مقدمة المرحلة الأولى">
   <h2>مقدمة المرحلة الأولى</h2>
 </div>
 
@@ -87,10 +85,10 @@
 <!-- سكريبت Wistia للفيديو الخاص بمقدمة المرحلة الأولى -->
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <script>
-function wistiaEmbed() {
+document.getElementById("intro_image").addEventListener("click", function() {
     var container = document.getElementById("wistia_video_container");
-    container.innerHTML = '<div class="wistia_embed wistia_async_jti0fzlfoo videoFoam=true" style="height:500px;width:100%">&nbsp;</div>';
-}
+    container.innerHTML = '<div class="wistia_embed wistia_async_jti0fzlfoo videoFoam=true" style="height:500px;width:100%"></div>';
+});
 </script>
 
 </body>
