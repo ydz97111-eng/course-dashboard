@@ -3,147 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>برنامج الدورة</title>
+<title>دورة الفيديو</title>
+
 <style>
-body {
+  body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-h2 {
     text-align: center;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.image-box {
-    text-align: center;
-    margin: 20px 0;
-    cursor: pointer;
-}
-
-.image-box img {
+    margin: 20px;
+  }
+  .video-box {
+    margin-bottom: 30px;
+  }
+  img {
     max-width: 100%;
-    border-radius: 12px;
-    transition: transform 0.3s;
-}
-
-.image-box img:hover {
-    transform: scale(1.03);
-}
-
-.video-container {
-    width: 100%;
-    margin: 20px 0;
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 500px;
-    border-radius: 12px;
-    border: none;
-}
+    height: auto;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+  }
+  #wistia_video_container {
+    margin-top: 20px;
+    display: none;
+  }
 </style>
 </head>
+
 <body>
 
-<div class="container">
+<h1>دورة الفيديو</h1>
 
-    <!-- صورة البداية -->
-    <div class="image-box">
-        <img src="images/top.jpg" alt="صورة البداية">
-    </div>
-
-    <!-- فيديوهات الدورة -->
-
-    <!-- فيديو: مقدمة المرحلة الأولى -->
-    <div class="image-box" id="intro_image">
-        <img src="images/intro.jpg" alt="مقدمة المرحلة الأولى">
-        <h2>مقدمة المرحلة الأولى</h2>
-    </div>
-    <div id="intro_video_container" class="video-container"></div>
-
-    <!-- فيديو: ملف الظل - القوة المظلمة -->
-    <div class="image-box" id="dark_force_image">
-        <img src="images/dark_force.jpg" alt="القوة المظلمة">
-        <h2>القوة المظلمة التي تمسك كعبيك</h2>
-    </div>
-    <div id="dark_force_video_container" class="video-container"></div>
-
-    <!-- فيديو: قابل الشيطان وجه لوجه -->
-    <div class="image-box" id="face_devil_image">
-        <img src="images/face_devil.jpg" alt="قابل الشيطان">
-        <h2>قابل الشيطان وجه لوجه</h2>
-    </div>
-    <div id="face_devil_video_container" class="video-container"></div>
-
-    <!-- فيديو: قانون الطبيعة -->
-    <div class="image-box" id="nature_image">
-        <img src="images/nature - نسخة.jpg" alt="قانون الطبيعة">
-        <h2>قانون الطبيعة</h2>
-    </div>
-    <div id="nature_video_container" class="video-container"></div>
-
-    <!-- فيديو: الازدواجية والصراع بين الرجل -->
-    <div class="image-box" id="duality_image">
-        <img src="images/duality.jpg" alt="الازدواجية والصراع">
-        <h2>الازدواجية والصراع بين الرجل</h2>
-    </div>
-    <div id="duality_video_container" class="video-container"></div>
-
-    <!-- صورة النهاية -->
-    <div class="image-box">
-        <img src="images/bottom.jpg" alt="صورة النهاية">
-    </div>
-
+<!-- صورة البداية -->
+<div class="video-box">
+  <img src="images/top.jpg" alt="بداية البرنامج">
 </div>
 
+<!-- قواعد البرنامج -->
+<div class="video-box">
+  <img src="images/quwaa.jpg" alt="قواعد البرنامج">
+  <h2>قواعد البرنامج</h2>
+</div>
+
+<!-- توضيح جد مهم -->
+<div class="video-box">
+  <img src="images/tawdih.jpg" alt="توضيح جد مهم عن البرنامج">
+  <h2>توضيح جد مهم عن البرنامج</h2>
+</div>
+
+<!-- مقدمة المرحلة الأولى (فيديو) -->
+<div class="video-box">
+  <img id="intro_image" src="images/intro.jpg" alt="مقدمة المرحلة الأولى">
+  <h2>مقدمة المرحلة الأولى</h2>
+</div>
+
+<!-- مكان ظهور الفيديو -->
+<div id="wistia_video_container"></div>
+
+<!-- قانون الطبيعة -->
+<div class="video-box">
+  <img src="images/nature - Copie.jpg" alt="قانون الطبيعة">
+  <h2>قانون الطبيعة</h2>
+</div>
+
+<!-- القوة المظلمة -->
+<div class="video-box">
+  <img src="images/power.jpg" alt="القوة المظلمة">
+  <h2>القوة المظلمة التي تمسك حياتك</h2>
+</div>
+
+<!-- قابل الشيطان -->
+<div class="video-box">
+  <img src="images/devil.jpg" alt="قابل الشيطان">
+  <h2>قابل الشيطان وجهًا لوجه</h2>
+</div>
+
+<!-- الازدواجية والصراع -->
+<div class="video-box">
+  <img src="images/duality.jpg" alt="الازدواجية والصراع">
+  <h2>الازدواجية والصراع بين الرجل</h2>
+</div>
+
+<!-- صورة النهاية -->
+<div class="video-box">
+  <img src="images/bottom.jpg" alt="نهاية البرنامج">
+</div>
+
+<!-- Wistia -->
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <script>
-// فيديو مقدمة المرحلة الأولى
-document.getElementById("intro_image").addEventListener("click", function() {
-    var container = document.getElementById("intro_video_container");
-    container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_HERE_1" allowfullscreen title="مقدمة المرحلة الأولى"></iframe>';
-    container.scrollIntoView({ behavior: "smooth" });
-});
+  const container = document.getElementById("wistia_video_container");
 
-// فيديو القوة المظلمة
-document.getElementById("dark_force_image").addEventListener("click", function() {
-    var container = document.getElementById("dark_force_video_container");
-    container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_HERE_2" allowfullscreen title="القوة المظلمة"></iframe>';
-    container.scrollIntoView({ behavior: "smooth" });
-});
+  container.innerHTML =
+    '<div class="wistia_embed wistia_async_jti0fzlfoo videoFoam=true" style="height:500px;width:100%"></div>';
 
-// فيديو قابل الشيطان وجه لوجه
-document.getElementById("face_devil_image").addEventListener("click", function() {
-    var container = document.getElementById("face_devil_video_container");
-    container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_HERE_3" allowfullscreen title="قابل الشيطان"></iframe>';
+  document.getElementById("intro_image").addEventListener("click", function () {
+    container.style.display = "block";
     container.scrollIntoView({ behavior: "smooth" });
-});
-
-// فيديو قانون الطبيعة
-document.getElementById("nature_image").addEventListener("click", function() {
-    var container = document.getElementById("nature_video_container");
-    container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/109bdcba161ee1c79a/e2e5343b0b57ac2b" allowfullscreen title="قانون الطبيعة"></iframe>';
-    container.scrollIntoView({ behavior: "smooth" });
-});
-
-// فيديو الازدواجية والصراع بين الرجل
-document.getElementById("duality_image").addEventListener("click", function() {
-    var container = document.getElementById("duality_video_container");
-    container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_HERE_5" allowfullscreen title="الازدواجية والصراع"></iframe>';
-    container.scrollIntoView({ behavior: "smooth" });
-});
+  });
 </script>
 
 </body>
