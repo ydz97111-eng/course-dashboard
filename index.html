@@ -60,48 +60,36 @@ h2 {
 
     <!-- فيديوهات الدورة -->
 
-    <!-- فيديو بدون صورة غلاف -->
-    <div class="video-box" id="no_cover_box">
-        <h2>أهلين فيك في البرنامج</h2>
-        <div id="no_cover_video_container" class="video-container"></div>
-    </div>
-
-    <!-- فيديو بدون صورة غلاف -->
-    <div class="video-box" id="important_box">
-        <h2>توضيح جد مهم عن البرنامج</h2>
-        <div id="important_video_container" class="video-container"></div>
-    </div>
-
     <!-- مقدمة المرحلة الأولى -->
-    <div class="video-box" id="intro_box">
+    <div class="video-box" id="intro_image">
         <img src="images/intro.jpg" alt="مقدمة المرحلة الأولى">
         <h2>مقدمة المرحلة الأولى</h2>
         <div id="intro_video_container" class="video-container"></div>
     </div>
 
     <!-- ملف الظل - القوة المظلمة -->
-    <div class="video-box" id="dark_force_box">
+    <div class="video-box" id="dark_force_image">
         <img src="images/dark_force.jpg" alt="القوة المظلمة">
         <h2>القوة المظلمة التي تمسك كعبيك</h2>
         <div id="dark_force_video_container" class="video-container"></div>
     </div>
 
     <!-- قابل الشيطان وجه لوجه -->
-    <div class="video-box" id="face_devil_box">
+    <div class="video-box" id="face_devil_image">
         <img src="images/face_devil.jpg" alt="قابل الشيطان">
         <h2>قابل الشيطان وجه لوجه</h2>
         <div id="face_devil_video_container" class="video-container"></div>
     </div>
 
     <!-- قانون الطبيعة -->
-    <div class="video-box" id="nature_box">
+    <div class="video-box" id="nature_image">
         <img src="images/nature.jpg" alt="قانون الطبيعة">
         <h2>قانون الطبيعة</h2>
         <div id="nature_video_container" class="video-container"></div>
     </div>
 
     <!-- الازدواجية والصراع بين الرجل -->
-    <div class="video-box" id="duality_box">
+    <div class="video-box" id="duality_image">
         <img src="images/duality.jpg" alt="الازدواجية والصراع">
         <h2>الازدواجية والصراع بين الرجل</h2>
         <div id="duality_video_container" class="video-container"></div>
@@ -115,53 +103,29 @@ h2 {
 </div>
 
 <script>
-// فيديو بدون صورة غلاف
-document.getElementById("no_cover_box").addEventListener("click", function() {
-    var container = document.getElementById("no_cover_video_container");
-    if(container.innerHTML === "") {
-        container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_0" width="100%" height="450" frameborder="0" allowfullscreen title="أهلين فيك في البرنامج"></iframe>';
-        container.scrollIntoView({ behavior: "smooth" });
-    }
-});
-
-// فيديو بدون صورة غلاف
-document.getElementById("important_box").addEventListener("click", function() {
-    var container = document.getElementById("important_video_container");
-    if(container.innerHTML === "") {
-        container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_00" width="100%" height="450" frameborder="0" allowfullscreen title="توضيح جد مهم عن البرنامج"></iframe>';
-        container.scrollIntoView({ behavior: "smooth" });
-    }
-});
-
 // مقدمة المرحلة الأولى
-document.getElementById("intro_box").addEventListener("click", function() {
+document.getElementById("intro_image").addEventListener("click", function() {
     var container = document.getElementById("intro_video_container");
-    if(container.innerHTML === "") {
-        container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_1" width="100%" height="450" frameborder="0" allowfullscreen title="مقدمة المرحلة الأولى"></iframe>';
-        container.scrollIntoView({ behavior: "smooth" });
-    }
+    container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_1" width="100%" height="450" frameborder="0" allowfullscreen title="مقدمة المرحلة الأولى"></iframe>';
+    container.scrollIntoView({ behavior: "smooth" });
 });
 
 // القوة المظلمة
-document.getElementById("dark_force_box").addEventListener("click", function() {
+document.getElementById("dark_force_image").addEventListener("click", function() {
     var container = document.getElementById("dark_force_video_container");
-    if(container.innerHTML === "") {
-        container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_2" width="100%" height="450" frameborder="0" allowfullscreen title="القوة المظلمة"></iframe>';
-        container.scrollIntoView({ behavior: "smooth" });
-    }
+    container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_2" width="100%" height="450" frameborder="0" allowfullscreen title="القوة المظلمة"></iframe>';
+    container.scrollIntoView({ behavior: "smooth" });
 });
 
 // قابل الشيطان وجه لوجه
-document.getElementById("face_devil_box").addEventListener("click", function() {
+document.getElementById("face_devil_image").addEventListener("click", function() {
     var container = document.getElementById("face_devil_video_container");
-    if(container.innerHTML === "") {
-        container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_3" width="100%" height="450" frameborder="0" allowfullscreen title="قابل الشيطان"></iframe>';
-        container.scrollIntoView({ behavior: "smooth" });
-    }
+    container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_3" width="100%" height="450" frameborder="0" allowfullscreen title="قابل الشيطان"></iframe>';
+    container.scrollIntoView({ behavior: "smooth" });
 });
 
 // قانون الطبيعة
-document.getElementById("nature_box").addEventListener("click", function() {
+document.getElementById("nature_image").addEventListener("click", function() {
     var container = document.getElementById("nature_video_container");
     if(container.innerHTML === "") {
         container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/109bdcba161ee1c79a/e2e5343b0b57ac2b" width="100%" height="450" frameborder="0" allowfullscreen title="قانون الطبيعة"></iframe>';
@@ -170,12 +134,10 @@ document.getElementById("nature_box").addEventListener("click", function() {
 });
 
 // الازدواجية والصراع
-document.getElementById("duality_box").addEventListener("click", function() {
+document.getElementById("duality_image").addEventListener("click", function() {
     var container = document.getElementById("duality_video_container");
-    if(container.innerHTML === "") {
-        container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_5" width="100%" height="450" frameborder="0" allowfullscreen title="الازدواجية والصراع"></iframe>';
-        container.scrollIntoView({ behavior: "smooth" });
-    }
+    container.innerHTML = '<iframe class="sproutvideo-player" src="https://videos.sproutvideo.com/embed/VID_ID_5" width="100%" height="450" frameborder="0" allowfullscreen title="الازدواجية والصراع"></iframe>';
+    container.scrollIntoView({ behavior: "smooth" });
 });
 </script>
 
