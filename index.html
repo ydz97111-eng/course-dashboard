@@ -3,102 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>دورة الفيديو</title>
+<title>برنامج العقلية والانضباط</title>
 
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
-  }
-  .video-box {
-    margin-bottom: 30px;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-  }
-  #wistia_video_container {
-    margin-top: 20px;
-    display: none;
-  }
+body{
+  font-family: Tahoma, Arial;
+  background:#f2f2f2;
+  margin:0;
+  direction:rtl;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+  background:#fff;
+  padding:15px;
+}
+.video-box{
+  margin-bottom:40px;
+}
+.video-box img{
+  width:100%;
+  border-radius:14px;
+}
+.video-box h2{
+  font-size:22px;
+  margin-top:12px;
+}
+.top-image, .bottom-image{
+  width:100%;
+  border-radius:16px;
+  margin-bottom:40px;
+}
 </style>
 </head>
 
 <body>
+<div class="container">
 
-<h1>دورة الفيديو</h1>
+<!-- 🔹 صورة البداية (أعلى الصفحة) -->
+<img src="images/top.jpg" class="top-image">
 
-<!-- صورة البداية -->
+<!-- فيديوهات بدون صورة -->
+<h2>قواعد البرنامج</h2>
+<h2>أهلين فيك في البرنامج</h2>
+<h2>توضيح جد مهم عن البرنامج</h2>
+
+<!-- فيديو مع صورة غلاف -->
 <div class="video-box">
-  <img src="images/top.jpg" alt="بداية البرنامج">
-</div>
-
-<!-- قواعد البرنامج -->
-<div class="video-box">
-  <img src="images/quwaa.jpg" alt="قواعد البرنامج">
-  <h2>قواعد البرنامج</h2>
-</div>
-
-<!-- توضيح جد مهم -->
-<div class="video-box">
-  <img src="images/tawdih.jpg" alt="توضيح جد مهم عن البرنامج">
-  <h2>توضيح جد مهم عن البرنامج</h2>
-</div>
-
-<!-- مقدمة المرحلة الأولى (فيديو) -->
-<div class="video-box">
-  <img id="intro_image" src="images/intro.jpg" alt="مقدمة المرحلة الأولى">
-  <h2>مقدمة المرحلة الأولى</h2>
-</div>
-
-<!-- مكان ظهور الفيديو -->
-<div id="wistia_video_container"></div>
-
-<!-- قانون الطبيعة -->
-<div class="video-box">
-  <img src="images/nature - Copie.jpg" alt="قانون الطبيعة">
+  <a href="LINK_VIDEO_1">
+    <img src="images/nature.jpg">
+  </a>
   <h2>قانون الطبيعة</h2>
 </div>
 
-<!-- القوة المظلمة -->
 <div class="video-box">
-  <img src="images/power.jpg" alt="القوة المظلمة">
-  <h2>القوة المظلمة التي تمسك حياتك</h2>
+  <a href="LINK_VIDEO_2">
+    <img src="images/intro.jpg">
+  </a>
+  <h2>مقدمة المرحلة الأولى</h2>
 </div>
 
-<!-- قابل الشيطان -->
 <div class="video-box">
-  <img src="images/devil.jpg" alt="قابل الشيطان">
-  <h2>قابل الشيطان وجهًا لوجه</h2>
+  <a href="LINK_VIDEO_3">
+    <img src="images/shadow.jpg">
+  </a>
+  <h2>ملفّ الظل: القوى المظلمة اللي ماسكة حياتك</h2>
 </div>
 
-<!-- الازدواجية والصراع -->
 <div class="video-box">
-  <img src="images/duality.jpg" alt="الازدواجية والصراع">
-  <h2>الازدواجية والصراع بين الرجل</h2>
+  <a href="LINK_VIDEO_4">
+    <img src="images/power.jpg">
+  </a>
+  <h2>1. القوة المظلمة التي تمسك كعبيك</h2>
 </div>
 
-<!-- صورة النهاية -->
 <div class="video-box">
-  <img src="images/bottom.jpg" alt="نهاية البرنامج">
+  <a href="LINK_VIDEO_5">
+    <img src="images/devil.jpg">
+  </a>
+  <h2>2. قابل الشيطان وجهًا لوجه</h2>
 </div>
 
-<!-- Wistia -->
-<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-<script>
-  const container = document.getElementById("wistia_video_container");
+<div class="video-box">
+  <a href="LINK_VIDEO_6">
+    <img src="images/duality.jpg">
+  </a>
+  <h2>3. الازدواجية والصراع بين الرجل</h2>
+</div>
 
-  container.innerHTML =
-    '<div class="wistia_embed wistia_async_jti0fzlfoo videoFoam=true" style="height:500px;width:100%"></div>';
+<!-- 🔹 صورة النهاية (أسفل الصفحة) -->
+<img src="images/bottom.jpg" class="bottom-image">
 
-  document.getElementById("intro_image").addEventListener("click", function () {
-    container.style.display = "block";
-    container.scrollIntoView({ behavior: "smooth" });
-  });
-</script>
-
+</div>
 </body>
+</html>
