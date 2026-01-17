@@ -1,99 +1,100 @@
-DOCTYPE html>
+!DOCTYPE html>
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>برنامج العقلية والانضباط</title>
-
+<title>دورة الفيديو</title>
 <style>
-body{
-  font-family: Tahoma, Arial;
-  background:#f2f2f2;
-  margin:0;
-  direction:rtl;
-}
-.container{
-  max-width:900px;
-  margin:auto;
-  background:#fff;
-  padding:15px;
-}
-.video-box{
-  margin-bottom:40px;
-}
-.video-box img{
-  width:100%;
-  border-radius:14px;
-}
-.video-box h2{
-  font-size:22px;
-  margin-top:12px;
-}
-.top-image, .bottom-image{
-  width:100%;
-  border-radius:16px;
-  margin-bottom:40px;
-}
+  body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+  .video-box { margin-bottom: 30px; }
+  img { cursor: pointer; max-width: 100%; height: auto; margin-bottom: 10px; }
+  #wistia_video_container { margin-top: 20px; display: none; }
 </style>
 </head>
-
 <body>
-<div class="container">
 
-<!-- 🔹 صورة البداية (أعلى الصفحة) -->
-<img src="images/top.jpg" class="top-image">
+<h1>دورة الفيديو</h1>
 
-<!-- فيديوهات بدون صورة -->
-<h2>قواعد البرنامج</h2>
-<h2>أهلين فيك في البرنامج</h2>
-<h2>توضيح جد مهم عن البرنامج</h2>
-
-<!-- فيديو مع صورة غلاف -->
+<!-- صورة البداية -->
 <div class="video-box">
-  <a href="LINK_VIDEO_1">
-    <img src="images/nature.jpg">
+  <img src="images/top.jpg" alt="بداية البرنامج">
+</div>
+
+<!-- فيديو: قواعد البرنامج -->
+<div class="video-box">
+  <a href="https://ydz97111.wistia.com/medias/VIDEO_ID_1" target="_blank">
+    <img src="images/quwaa.jpg" alt="قواعد البرنامج">
+  </a>
+  <h2>قواعد البرنامج</h2>
+</div>
+
+<!-- فيديو: توضيح جد مهم عن البرنامج -->
+<div class="video-box">
+  <a href="https://ydz97111.wistia.com/medias/VIDEO_ID_2" target="_blank">
+    <img src="images/tawdih.jpg" alt="توضيح جد مهم عن البرنامج">
+  </a>
+  <h2>توضيح جد مهم عن البرنامج</h2>
+</div>
+
+<!-- فيديو: مقدمة المرحلة الأولى (يظهر عند الضغط على الصورة داخل الموقع) -->
+<div class="video-box">
+  <img id="intro_image" src="images/intro.jpg" alt="مقدمة المرحلة الأولى">
+  <h2>مقدمة المرحلة الأولى</h2>
+</div>
+
+<!-- مكان ظهور الفيديو -->
+<div id="wistia_video_container"></div>
+
+<!-- فيديو: قانون الطبيعة -->
+<div class="video-box">
+  <a href="https://ydz97111.wistia.com/medias/nature_video_id" target="_blank">
+    <img src="images/nature.jpg" alt="قانون الطبيعة">
   </a>
   <h2>قانون الطبيعة</h2>
 </div>
 
+<!-- فيديو: القوة المظلمة -->
 <div class="video-box">
-  <a href="LINK_VIDEO_2">
-    <img src="images/intro.jpg">
+  <a href="https://ydz97111.wistia.com/medias/power_video_id" target="_blank">
+    <img src="images/power.jpg" alt="القوة المظلمة">
   </a>
-  <h2>مقدمة المرحلة الأولى</h2>
+  <h2>القوة المظلمة التي تمسك حياتك</h2>
 </div>
 
+<!-- فيديو: قابل الشيطان -->
 <div class="video-box">
-  <a href="LINK_VIDEO_3">
-    <img src="images/shadow.jpg">
+  <a href="https://ydz97111.wistia.com/medias/devil_video_id" target="_blank">
+    <img src="images/devil.jpg" alt="قابل الشيطان">
   </a>
-  <h2>ملفّ الظل: القوى المظلمة اللي ماسكة حياتك</h2>
+  <h2>قابل الشيطان وجه لوجه</h2>
 </div>
 
+<!-- فيديو: الازدواجية والصراع -->
 <div class="video-box">
-  <a href="LINK_VIDEO_4">
-    <img src="images/power.jpg">
+  <a href="https://ydz97111.wistia.com/medias/dual_video_id" target="_blank">
+    <img src="images/dual.jpg" alt="الازدواجية والصراع">
   </a>
-  <h2>1. القوة المظلمة التي تمسك كعبيك</h2>
+  <h2>الازدواجية والصراع بين الرجل</h2>
 </div>
 
+<!-- صورة النهاية -->
 <div class="video-box">
-  <a href="LINK_VIDEO_5">
-    <img src="images/devil.jpg">
-  </a>
-  <h2>2. قابل الشيطان وجهًا لوجه</h2>
+  <img src="images/bottom.jpg" alt="نهاية البرنامج">
 </div>
 
-<div class="video-box">
-  <a href="LINK_VIDEO_6">
-    <img src="images/duality.jpg">
-  </a>
-  <h2>3. الازدواجية والصراع بين الرجل</h2>
-</div>
+<!-- سكريبت Wistia للفيديو الخاص بمقدمة المرحلة الأولى -->
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+<script>
+  // إنشاء الفيديو مسبقًا ولكن مخفي
+  var container = document.getElementById("wistia_video_container");
+  container.innerHTML = '<div class="wistia_embed wistia_async_jti0fzlfoo videoFoam=true" style="height:500px;width:100%"></div>';
 
-<!-- 🔹 صورة النهاية (أسفل الصفحة) -->
-<img src="images/bottom.jpg" class="bottom-image">
+  // عند الضغط على الصورة نظهر الفيديو
+  document.getElementById("intro_image").addEventListener("click", function() {
+      container.style.display = "block";
+      container.scrollIntoView({behavior: "smooth"});
+  });
+</script>
 
-</div>
 </body>
 </html>
