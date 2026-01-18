@@ -4,13 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>دورة الفيديو</title>
+
 <style>
   body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
   .video-box { margin-bottom: 30px; }
   img { cursor: pointer; max-width: 100%; height: auto; margin-bottom: 10px; }
-  #wistia_video_container { margin-top: 20px; display: none; }
+  .video-container { display: none; margin-top: 20px; }
+  iframe { max-width: 100%; }
 </style>
 </head>
+
 <body>
 
 <h1>دورة الفيديو</h1>
@@ -20,58 +23,65 @@
   <img src="images/top.jpg" alt="بداية البرنامج">
 </div>
 
-<!-- فيديو: قواعد البرنامج -->
+<!-- قواعد البرنامج -->
 <div class="video-box">
-  <a href="https://ydz97111.wistia.com/medias/VIDEO_ID_1" target="_blank">
+  <a href="https://videos.sproutvideo.com/embed/069bdcbb1619e2c78c/66d419bf371ed6e4" target="_blank">
     <img src="images/quwaa.jpg" alt="قواعد البرنامج">
   </a>
   <h2>قواعد البرنامج</h2>
 </div>
 
-<!-- فيديو: توضيح جد مهم عن البرنامج -->
+<!-- توضيح جد مهم -->
 <div class="video-box">
-  <a href="https://ydz97111.wistia.com/medias/VIDEO_ID_2" target="_blank">
+  <a href="https://videos.sproutvideo.com/embed/8c9bdcbb1619e7c906/72389f7c411f85bb" target="_blank">
     <img src="images/tawdih.jpg" alt="توضيح جد مهم عن البرنامج">
   </a>
   <h2>توضيح جد مهم عن البرنامج</h2>
 </div>
 
-<!-- فيديو: مقدمة المرحلة الأولى (يظهر عند الضغط على الصورة داخل الموقع) -->
+<!-- مقدمة المرحلة الأولى -->
 <div class="video-box">
   <img id="intro_image" src="images/intro.jpg" alt="مقدمة المرحلة الأولى">
   <h2>مقدمة المرحلة الأولى</h2>
 </div>
 
-<!-- مكان ظهور الفيديو -->
-<div id="wistia_video_container"></div>
+<div id="intro_video" class="video-container">
+  <iframe
+    src="https://videos.sproutvideo.com/embed/8c9bdcbb1619e2cc06/18ec261a6a1be34f"
+    width="640"
+    height="360"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
 
-<!-- فيديو: قانون الطبيعة -->
+<!-- قانون الطبيعة -->
 <div class="video-box">
-  <a href="https://ydz97111.wistia.com/medias/nature_video_id" target="_blank">
+  <a href="https://videos.sproutvideo.com/embed/109bdcba161ee1c79a/e2e5343b0b57ac2b" target="_blank">
     <img src="images/nature.jpg" alt="قانون الطبيعة">
   </a>
   <h2>قانون الطبيعة</h2>
 </div>
 
-<!-- فيديو: القوة المظلمة -->
+<!-- القوة المظلمة -->
 <div class="video-box">
-  <a href="https://ydz97111.wistia.com/medias/power_video_id" target="_blank">
+  <a href="https://videos.sproutvideo.com/embed/ee9bdcbb1619ebca64/3c7ed653bae0ae30" target="_blank">
     <img src="images/power.jpg" alt="القوة المظلمة">
   </a>
   <h2>القوة المظلمة التي تمسك حياتك</h2>
 </div>
 
-<!-- فيديو: قابل الشيطان -->
+<!-- قابل الشيطان -->
 <div class="video-box">
-  <a href="https://ydz97111.wistia.com/medias/devil_video_id" target="_blank">
+  <a href="https://videos.sproutvideo.com/embed/dc9bdcbb1619e4c256/a884289a52b5fc48" target="_blank">
     <img src="images/devil.jpg" alt="قابل الشيطان">
   </a>
   <h2>قابل الشيطان وجه لوجه</h2>
 </div>
 
-<!-- فيديو: الازدواجية والصراع -->
+<!-- الازدواجية والصراع -->
 <div class="video-box">
-  <a href="https://ydz97111.wistia.com/medias/dual_video_id" target="_blank">
+  <a href="https://videos.sproutvideo.com/embed/109bdcbb1619e4c49a/4fca87a365db9493" target="_blank">
     <img src="images/duality.jpg" alt="الازدواجية والصراع">
   </a>
   <h2>الازدواجية والصراع بين الرجل</h2>
@@ -82,17 +92,11 @@
   <img src="images/bottom.jpg" alt="نهاية البرنامج">
 </div>
 
-<!-- سكريبت Wistia للفيديو الخاص بمقدمة المرحلة الأولى -->
-<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <script>
-  // إنشاء الفيديو مسبقًا ولكن مخفي
-  var container = document.getElementById("wistia_video_container");
-  container.innerHTML = '<div class="wistia_embed wistia_async_jti0fzlfoo videoFoam=true" style="height:500px;width:100%"></div>';
-
-  // عند الضغط على الصورة نظهر الفيديو
-  document.getElementById("intro_image").addEventListener("click", function() {
-      container.style.display = "block";
-      container.scrollIntoView({behavior: "smooth"});
+  document.getElementById("intro_image").addEventListener("click", function () {
+    var video = document.getElementById("intro_video");
+    video.style.display = "block";
+    video.scrollIntoView({ behavior: "smooth" });
   });
 </script>
 
